@@ -50,11 +50,14 @@ const HealthScoreButton = () => {
       >
         Generate Health Score
       </button>
-
-      
-
       {showModal && (
-        <HealthScoreModal onClose={() => setShowModal(false)} onSubmit={submitHealthScore} healthscore={healthScore} setHealthscore={setHealthScore}/>
+        <HealthScoreModal 
+          onClose={() => setShowModal(false)} 
+          onSubmit={submitHealthScore} 
+          healthscore={healthScore} 
+          setHealthscore={setHealthScore} 
+          healthData={healthData}
+        />
       )}
     </div>
   );
