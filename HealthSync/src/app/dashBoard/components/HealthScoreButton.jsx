@@ -36,7 +36,7 @@ const HealthScoreButton = () => {
       });
       const result = await response.json();
       setHealthScore(result.healthScore);
-      setShowModal(false);
+      
     } catch (error) {
       console.error("Error fetching health score:", error);
     }
@@ -51,14 +51,10 @@ const HealthScoreButton = () => {
         Generate Health Score
       </button>
 
-      {healthScore !== null && (
-        <div className="mt-5 p-4 bg-green-500 text-white rounded">
-          Health Score: {healthScore}
-        </div>
-      )}
+      
 
       {showModal && (
-        <HealthScoreModal onClose={() => setShowModal(false)} onSubmit={submitHealthScore} />
+        <HealthScoreModal onClose={() => setShowModal(false)} onSubmit={submitHealthScore} healthscore={healthScore} setHealthscore={setHealthScore}/>
       )}
     </div>
   );
