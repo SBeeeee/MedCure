@@ -1,10 +1,10 @@
-import Image from "next/image";
-import DashBoard from "./dashBoard/components/DashBoard";
+import HeroSection from "./components/HeroSection"
+
 
 export default function Home() {
   return (
-    <div>
-hello hi 
+    <div className="bg-gray-900">
+      <HeroSection/>
     </div>
   )
 }
