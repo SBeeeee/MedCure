@@ -30,17 +30,17 @@ A web app for **real-time health tracking**, **ML-powered health scoring**, and 
 
 1. **Clone the Repo**  
    ```bash
-   git clone https://github.com/yourusername/health-monitoring-app.git
+   git clone https://github.com/SBeeeee/MedCure
    ```
 
 2. **Install Dependencies**  
    ```bash
-   cd frontend && npm install  
+   cd HealthSync && npm install  
    cd ../backend && npm install
    ```
 
 3. **Run the App**  
-   - Start the backend: `node index.js`  
+   - Start the backend: `npx nodemon.js`  
    - Start the frontend: `npm run dev` in the frontend directory
 
 4. **Connect Hardware**  
