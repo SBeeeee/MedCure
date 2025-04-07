@@ -1,6 +1,3 @@
-Sure! Here's a more concise and clean version of the **README** that gives just the essentials and how to use it, along with a note for contributions:
-
----
 
 # 🩺 Real-Time Health Monitoring Platform
 
