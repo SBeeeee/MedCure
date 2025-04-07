@@ -1,6 +1,6 @@
 import express from "express";
 import { senddata,getdata } from "../controller/HealthData.js";
-import { getHealthScore } from "../controller/predict.js";
+import { getHealthScore } from "../controller/Predict.js";
 
 const router=express.Router();
 router.route("/save").post(senddata);
