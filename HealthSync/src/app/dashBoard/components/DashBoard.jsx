@@ -30,12 +30,14 @@ const DashBoard = () => {
       </h1>
 
       <h1 className="text-3xl font-bold mb-5">📡 Health Monitoring Dashboard</h1>
+      <div className="flex justify-center gap-4 items-center">
       <HealthStats />
+      <SaveHealthDataButton user={user} data={data} /></div>
       <div className="w-full max-w-4xl mt-6">
         <HealthGraph />
       </div>
       <HealthScoreButton />
-      <SaveHealthDataButton user={user} data={data} />
+    
     </div>
   );
 };

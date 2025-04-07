@@ -1,12 +1,14 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
   // Function to fetch the user session
   const fetchUser = async () => {
@@ -78,13 +80,17 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = async () => {
+    router.push("/");
     setLoading(true);
     try {
       await fetch("http://localhost:8000/logout", {
         method: "GET",
         credentials: "include",
       });
+     
+      alert(`${user.fullName} logged out`)
       setUser(null);
+     
     } catch (error) {
       console.error("Logout Error:", error);
     } finally {
